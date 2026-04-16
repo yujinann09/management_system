@@ -1,0 +1,92 @@
+.header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-main);
+  border-radius: var(--border-radius-m);
+  padding: 8px 16px;
+  width: 300px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s;
+}
+
+.search:focus-within {
+  border-color: var(--efarina-brand-light);
+  box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.2);
+}
+
+.searchInput {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  margin-left: 8px;
+  color: var(--text-main);
+}
+
+.profileInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bell {
+  position: relative;
+  font-size: 1.2rem;
+  padding: 8px;
+  border-radius: 50%;
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+}
+
+.bell::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--efarina-accent-red);
+  border-radius: 50%;
+  border: 2px solid var(--bg-header);
+}
+
+.avatarContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--efarina-brand-m), var(--efarina-brand-dark));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.userName {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.userRole {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}

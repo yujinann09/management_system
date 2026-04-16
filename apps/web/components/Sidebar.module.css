@@ -1,0 +1,86 @@
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-right: var(--glass-border);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 20px;
+  z-index: 100;
+  border-radius: 0;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.02);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--efarina-brand-m);
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--efarina-brand-light), var(--efarina-brand-m));
+  border-radius: var(--border-radius-s);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: var(--border-radius-s);
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.navItem:hover {
+  background-color: rgba(14, 116, 144, 0.05); /* efarina-brand hover */
+  color: var(--efarina-brand-m);
+  transform: translateX(4px);
+}
+
+.active {
+  background-color: rgba(14, 116, 144, 0.1);
+  color: var(--efarina-brand-m);
+  font-weight: 600;
+}
+
+.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 24px;
+  width: 4px;
+  background-color: var(--efarina-brand-m);
+  border-radius: 0 4px 4px 0;
+}
+
+.logout {
+  margin-top: auto;
+  color: var(--efarina-accent-red);
+}
+
+.logout:hover {
+  background-color: rgba(225, 29, 72, 0.05);
+  transform: translateX(4px);
+}
